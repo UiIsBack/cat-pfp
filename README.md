@@ -1,6 +1,6 @@
 # Requirements
 
-1. python ^3.8^
+1. [Python](https://python.org)
 
 
 # Run
