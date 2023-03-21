@@ -12,8 +12,10 @@ if config['text'] != "":
     arg  = f"/says/{config['text']}"
 else: arg = ""
 while True:
-
-    image_response = requests.get(f"https://cataas.com/cat/cute/{arg}")
+    mp = requests.get("https://api.thecatapi.com/v1/images/search").json()
+    print(mp)
+    url = mp[0]['url']
+    image_response = requests.get(url)
     image_data = image_response.content
 
     base64_image = base64.b64encode(image_data).decode('utf-8')
