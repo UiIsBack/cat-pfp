@@ -28,7 +28,7 @@ while True:
         "avatar": "data:image/jpeg;base64," + base64_image
     }
     response = requests.patch("https://discord.com/api/v9/users/@me", headers=headers, json=data)
-    if response.status_code == 200:
+    if response.status_code == 200: 
         changed += 1
         print(f"[{changed}] Changed pfp")
         json = {
